@@ -1,0 +1,28 @@
+{
+    "name": "siteworxpro/cli-progress-bar",
+    "description": "Cli progress bar",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dariusz Półtorak",
+            "email": "poltorak.dariusz@gmail.com"
+        },
+        {
+          "name": "Mason Phillips",
+          "email": "math.matrix@icloud.com",
+          "role": "Contributor"
+        },
+        {
+            "name": "Ron Rise",
+            "email": "ron@siteworxpro.com",
+            "role": "Contributor"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Siteworx\\ProgressBar\\": "src/"
+        }
+    }
+}
