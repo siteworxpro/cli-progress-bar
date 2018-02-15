@@ -1,7 +1,7 @@
 # cli-progress-bar [![Build Status](https://travis-ci.org/siteworxpro/cli-progress-bar.svg?branch=master)](https://travis-ci.org/siteworxpro/cli-progress-bar)
 Progress bar for cli apps
 
-![Forked From](https://github.com/dariuszp/cli-progress-bar)
+[Forked From dariuszp/cli-progress-bar](https://github.com/dariuszp/cli-progress-bar)
 
 ![example animation](examples/img/terminal.gif)
 
