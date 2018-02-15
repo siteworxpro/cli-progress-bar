@@ -1,6 +1,8 @@
 # cli-progress-bar [![Build Status](https://travis-ci.org/siteworxpro/cli-progress-bar.svg?branch=master)](https://travis-ci.org/siteworxpro/cli-progress-bar)
 Progress bar for cli apps
 
+![Forked From](https://github.com/dariuszp/cli-progress-bar)
+
 ![example animation](examples/img/terminal.gif)
 
 ## Installation
@@ -84,5 +86,7 @@ More features like:
 in [example](examples/) directory.
 
 ----
+Author: Półtorak Dariusz
+Contributors: [@mathmatrix828 - Mason Phillips](https://github.com/mathmatrix828/)
 
 License: [MIT](https://opensource.org/licenses/MIT)
