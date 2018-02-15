@@ -5,18 +5,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Dariusz Półtorak",
-            "email": "poltorak.dariusz@gmail.com"
-        },
-        {
-          "name": "Mason Phillips",
-          "email": "math.matrix@icloud.com",
-          "role": "Contributor"
-        },
-        {
-            "name": "Ron Rise",
-            "email": "ron@siteworxpro.com",
-            "role": "Contributor"
+            "name": "Siteworxpro",
+            "email": "websites@siteworxpro.com"
         }
     ],
     "require": {},

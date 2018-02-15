@@ -86,6 +86,3 @@ in [example](examples/) directory.
 ----
 
 License: [MIT](https://opensource.org/licenses/MIT)
-
-Author: Półtorak Dariusz
-Contributors: [@mathmatrix828 - Mason Phillips](https://github.com/mathmatrix828/), [Ron Rise](https://github.com/ronrise/)
