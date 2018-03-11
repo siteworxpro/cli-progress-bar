@@ -415,13 +415,17 @@ class CliProgressBar
 
         if ($this->lastIterationTime === null) {
             $this->lastIterationTime = $now;
-            return '--:--';
+            return '--:--:--';
         }
 
         $interval = $now - $this->lastIterationTime;
         $this->lastIterationTime = $now;
 
         $this->totalTime += $interval;
+
+        if ($this->currentStep < 3) {
+            return '--:--:--';
+        }
 
         $stepsRemaining = $this->steps - $this->currentStep;
 
@@ -433,16 +437,21 @@ class CliProgressBar
 
         $timeRemaining = round($avgPerStep * $stepsRemaining, 0);
 
-
         $minutes = 0;
         while ($timeRemaining >= 60) {
             $minutes++;
             $timeRemaining -= 60;
         }
 
+        $hours = 0;
+        while ($minutes > 60) {
+            $hours++;
+            $minutes -= 60;
+        }
+
         $seconds = $timeRemaining;
 
-        return str_pad($minutes, 2, 0, STR_PAD_LEFT) . ':' . str_pad($seconds, 2, 0, STR_PAD_LEFT);
+        return str_pad($hours, 2, 0, STR_PAD_LEFT) . ':' . str_pad($minutes, 2, 0, STR_PAD_LEFT) . ':' . str_pad($seconds, 2, 0, STR_PAD_LEFT);
     }
 
     /**
