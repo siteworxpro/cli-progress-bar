@@ -45,7 +45,7 @@ class CliProgressBarTest extends \PHPUnit\Framework\TestCase
             sleep(5);
         }
 
-        $expected = "\r▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░ 60.0% (3/5) 00:10";
+        $expected = "\r▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░ 60.0% (3/5) 00:00:10";
 
         $this->assertEquals($expected, (string) $bar);
     }
