@@ -444,7 +444,7 @@ class CliProgressBar
         }
 
         $hours = 0;
-        while ($minutes > 60) {
+        while ($minutes >= 60) {
             $hours++;
             $minutes -= 60;
         }
