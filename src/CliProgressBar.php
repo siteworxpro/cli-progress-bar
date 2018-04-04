@@ -387,9 +387,9 @@ class CliProgressBar
      */
     public function draw(): string
     {
-        $fullValue = floor($this->getCurrentStep() / $this->getSteps() * $this->getBarLength());
+        $fullValue = $this->getSteps() !== 0 ? floor($this->getCurrentStep() / $this->getSteps() * $this->getBarLength()) : 0;
         $emptyValue = $this->getBarLength() - $fullValue;
-        $prc = number_format(($this->getCurrentStep() / $this->getSteps()) * 100, 1, '.', ' ');
+        $prc = $this->getSteps() !== 0 ? number_format(($this->getCurrentStep() / $this->getSteps()) * 100, 1, '.', ' ') : 0.0;
 
         $colorStart = '';
         $colorEnd = '';
@@ -405,7 +405,7 @@ class CliProgressBar
 
         $userDetail = $this->getDetails();
         $userDetail = ((\strlen($userDetail) > 1) ? "{$userDetail} " : '');
-        $bar = sprintf("%4\$s%5\$s %3\$.1f%% (%1\$d/%2\$d) ", $this->getCurrentStep(), $this->getSteps(), $prc, str_repeat($this->charFull, $fullValue), str_repeat($this->charEmpty, $emptyValue));
+        $bar = sprintf("%4\$s%5\$s %3\$.1f%% (%1\$d/%2\$d) ", $this->getCurrentStep(), $this->getSteps(), $prc, str_repeat($this->charFull, (int) $fullValue), str_repeat($this->charEmpty, (int) $emptyValue));
         return sprintf("\r%s%s%s%s%s", $colorStart, $userDetail, $bar, $timeString, $colorEnd);
     }
 
